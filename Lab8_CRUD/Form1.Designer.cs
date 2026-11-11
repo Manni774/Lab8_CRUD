@@ -42,10 +42,10 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.labelStatus = new System.Windows.Forms.Label();
-            this.buttonExport = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.labelSearch = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericGrade)).BeginInit();
@@ -199,16 +199,6 @@
             this.labelStatus.TabIndex = 14;
             this.labelStatus.Text = "Готово";
             // 
-            // buttonExport
-            // 
-            this.buttonExport.Location = new System.Drawing.Point(811, 477);
-            this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(143, 46);
-            this.buttonExport.TabIndex = 15;
-            this.buttonExport.Text = "Экспорт в CSV";
-            this.buttonExport.UseVisualStyleBackColor = true;
-            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
-            // 
             // buttonCancel
             // 
             this.buttonCancel.Location = new System.Drawing.Point(502, 477);
@@ -235,15 +225,25 @@
             this.textBoxSearch.Size = new System.Drawing.Size(236, 26);
             this.textBoxSearch.TabIndex = 18;
             // 
+            // buttonExport
+            // 
+            this.buttonExport.Location = new System.Drawing.Point(789, 476);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(149, 46);
+            this.buttonExport.TabIndex = 19;
+            this.buttonExport.Text = "Экспорт в CSV";
+            this.buttonExport.UseVisualStyleBackColor = true;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 544);
+            this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonDelete);
@@ -286,10 +286,10 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label labelStatus;
-        private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button buttonExport;
     }
 }
 

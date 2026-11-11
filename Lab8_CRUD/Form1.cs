@@ -228,6 +228,29 @@ namespace Lab8_CRUD
             MessageBox.Show("Данные перезагружены.");
         }
 
+
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearch();
+        }
+
+        private void ApplySearch()
+        {
+            if (view == null) return;
+
+            string text = textBoxSearch.Text.Trim();
+
+            if (text == "")
+            {
+                view.RowFilter = "";
+            }
+            else
+            {
+                view.RowFilter = "FullName LIKE '%" + text + "%'";
+            }
+        }
+
         private void buttonExport_Click(object sender, EventArgs e)
         {
             if (dataGridViewStudents.Rows.Count == 0)
@@ -271,27 +294,6 @@ namespace Lab8_CRUD
             catch (Exception ex)
             {
                 MessageBox.Show("Ошибка экспорта: " + ex.Message);
-            }
-        }
-
-        private void textBoxSearch_TextChanged(object sender, EventArgs e)
-        {
-            ApplySearch();
-        }
-
-        private void ApplySearch()
-        {
-            if (view == null) return;
-
-            string text = textBoxSearch.Text.Trim();
-
-            if (text == "")
-            {
-                view.RowFilter = "";
-            }
-            else
-            {
-                view.RowFilter = "FullName LIKE '%" + text + "%'";
             }
         }
     }
