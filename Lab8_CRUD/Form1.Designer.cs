@@ -44,6 +44,8 @@
             this.labelStatus = new System.Windows.Forms.Label();
             this.buttonExport = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericGrade)).BeginInit();
@@ -66,7 +68,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(174, 310);
+            this.labelName.Location = new System.Drawing.Point(320, 303);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(51, 20);
             this.labelName.TabIndex = 1;
@@ -74,14 +76,14 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(252, 307);
+            this.textBoxName.Location = new System.Drawing.Point(398, 300);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(234, 26);
             this.textBoxName.TabIndex = 2;
             // 
             // numericAge
             // 
-            this.numericAge.Location = new System.Drawing.Point(672, 307);
+            this.numericAge.Location = new System.Drawing.Point(818, 300);
             this.numericAge.Minimum = new decimal(new int[] {
             15,
             0,
@@ -99,7 +101,7 @@
             // labelAge
             // 
             this.labelAge.AutoSize = true;
-            this.labelAge.Location = new System.Drawing.Point(544, 310);
+            this.labelAge.Location = new System.Drawing.Point(690, 303);
             this.labelAge.Name = "labelAge";
             this.labelAge.Size = new System.Drawing.Size(76, 20);
             this.labelAge.TabIndex = 5;
@@ -108,7 +110,7 @@
             // labelGroup
             // 
             this.labelGroup.AutoSize = true;
-            this.labelGroup.Location = new System.Drawing.Point(174, 372);
+            this.labelGroup.Location = new System.Drawing.Point(320, 365);
             this.labelGroup.Name = "labelGroup";
             this.labelGroup.Size = new System.Drawing.Size(65, 20);
             this.labelGroup.TabIndex = 6;
@@ -116,7 +118,7 @@
             // 
             // textBoxGroup
             // 
-            this.textBoxGroup.Location = new System.Drawing.Point(252, 372);
+            this.textBoxGroup.Location = new System.Drawing.Point(398, 365);
             this.textBoxGroup.Name = "textBoxGroup";
             this.textBoxGroup.Size = new System.Drawing.Size(100, 26);
             this.textBoxGroup.TabIndex = 7;
@@ -124,7 +126,7 @@
             // labelGrade
             // 
             this.labelGrade.AutoSize = true;
-            this.labelGrade.Location = new System.Drawing.Point(544, 372);
+            this.labelGrade.Location = new System.Drawing.Point(690, 365);
             this.labelGrade.Name = "labelGrade";
             this.labelGrade.Size = new System.Drawing.Size(122, 20);
             this.labelGrade.TabIndex = 8;
@@ -138,7 +140,7 @@
             0,
             0,
             65536});
-            this.numericGrade.Location = new System.Drawing.Point(672, 370);
+            this.numericGrade.Location = new System.Drawing.Point(818, 363);
             this.numericGrade.Maximum = new decimal(new int[] {
             5,
             0,
@@ -217,11 +219,29 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // labelSearch
+            // 
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Location = new System.Drawing.Point(12, 266);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(123, 20);
+            this.labelSearch.TabIndex = 17;
+            this.labelSearch.Text = "Поиск по ФИО:";
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(16, 297);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(236, 26);
+            this.textBoxSearch.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 544);
+            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.labelStatus);
@@ -268,6 +288,8 @@
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Label labelSearch;
+        private System.Windows.Forms.TextBox textBoxSearch;
     }
 }
 

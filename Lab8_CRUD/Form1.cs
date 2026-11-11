@@ -11,6 +11,8 @@ namespace Lab8_CRUD
     {
         string connStr = @"Server=ALEKSUSER;Database=StudentDB;Integrated Security=True;";
 
+        DataView view;
+
         public Form1()
         {
             InitializeComponent();
@@ -269,6 +271,27 @@ namespace Lab8_CRUD
             catch (Exception ex)
             {
                 MessageBox.Show("Ошибка экспорта: " + ex.Message);
+            }
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearch();
+        }
+
+        private void ApplySearch()
+        {
+            if (view == null) return;
+
+            string text = textBoxSearch.Text.Trim();
+
+            if (text == "")
+            {
+                view.RowFilter = "";
+            }
+            else
+            {
+                view.RowFilter = "FullName LIKE '%" + text + "%'";
             }
         }
     }
